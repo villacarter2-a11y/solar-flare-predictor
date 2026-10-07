@@ -251,7 +251,7 @@ plt.plot(sample_values.index, sample_predicted,
 #plot with log scale
 plt.yscale('log')
 plt.title('Predicted vs Actual Future MAX FLUX Monitor')
-plt.xlabel("Original databse time line(starting at the 1000th minute and every 100th row after that)")
+plt.xlabel("Original databse time line(every 100th row after that)")
 plt.ylabel("Max Flux in XRSB (w/m^2)")
 plt.grid(True, which='both', linestyle=":", alpha =.4)
 plt.legend(fontsize=10, loc='upper left')

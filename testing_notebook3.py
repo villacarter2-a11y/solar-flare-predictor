@@ -224,7 +224,7 @@ print(f" RAW ALL Mean Squared Error (MSE): {mse_all_raw:.8f}")
 
 #Create visualization of how well model predicts max xrsb to the actual value
 
-#only look at every hundreth value (ensures model shows accurately for most datapoints)
+#only look at every thousandth value (ensures model shows accurately for most datapoints)
 sample_values= actual_all_raw.iloc[::1000]
 sample_predicted= predicted_all_raw[::1000]
 
@@ -289,7 +289,7 @@ plt.plot(sample_values.index, sample_predicted,
 #plot with log scale
 plt.yscale('log')
 plt.title('Predicted vs Actual Future MAX FLUX Monitor')
-plt.xlabel("Original databse time line(starting at the 1000th minute and every 100th row after that)")
+plt.xlabel("Original databse time line(every 1000th)")
 plt.ylabel("Max Flux in XRSB (w/m^2)")
 plt.grid(True, which='both', linestyle=":", alpha =.4)
 plt.legend(fontsize=10, loc='upper left')
@@ -333,7 +333,7 @@ plt.plot(range(len(actual_growth)), predicted_growth,
 #plot with log scale
 plt.yscale('symlog')
 plt.title('Predicted vs Actual Future Growth Monitor')
-plt.xlabel("Original databse time line(for every 100th)")
+plt.xlabel("Original databse time line(for every 1000th)")
 plt.ylabel("Max Growth index")
 plt.grid(True, which='both', linestyle=":", alpha =.4)
 plt.legend(fontsize=10, loc='upper left')
@@ -356,7 +356,7 @@ plt.plot(range(len(sample_previous_max)),sample_previous_max,
 )
 plt.yscale('log')
 plt.title('Actual past max vs Atual future max Monitor')
-plt.xlabel('Original database time line for every 100th value')
+plt.xlabel('Original database time line for every 1000th value')
 plt.grid(True, which='both', linestyle=":", alpha =.4)
 plt.legend(fontsize=10, loc='upper left')
 plt.show()

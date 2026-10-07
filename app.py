@@ -131,7 +131,7 @@ def train_model():
     
 
 
-    #load model from solar_model.json file
+    #load model from solar_model.json file and return the model
     regressor = xgb.XGBRegressor()
     regressor.load_model("solar_model.json")
     return regressor
