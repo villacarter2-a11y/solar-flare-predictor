@@ -105,7 +105,7 @@ plt.show()
 
 trigger_indices = np.where(y_test_watts >= 1e-5)[0]
 
-# make sure there is an event (credit: Google's Gemini AI for test code specifically the shifting part. i wrote the while and for loop :)  
+# track event timelines to check how the model is tracking
 if len(trigger_indices) > 0:
     # Extract index of a massive solar flare event
     index = 0

@@ -74,7 +74,7 @@ predicted_all_log = regressor_all.predict(X_test_all)
 actual_all_raw = 10 ** y_test_all 
 predicted_all_raw = 10 ** predicted_all_log
 
-# make sure there is an event (credit: Google's Gemini AI for test code specifically the shifting part. i wrote the while and for loop :)
+## track event timelines to check how the model is tracking
 # trigger_indices = np.where(actual_all_raw >= 1e-7)[0]
 # count=0
 # if len(trigger_indices) > 0:
