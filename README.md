@@ -14,11 +14,10 @@ This is a real-time data engineering pipeline gathering and using GOES 18 Long X
 * **Production Serialization:** To run inference efficiently on the web dashboard without hosting a large database file, the model was trained locally using a 760MB SQLite database (model_data.db) and its optimized weights were exported directly to a lightweight solar_model.json file.
 
 ### Repository File History
-The files in this repository track the iterative design phases of the project:
 * **app.py:** The production Streamlit application script containing the live streaming/tracking logic and model inference loops.
 * **solar_model.json:** The exported, pre-trained XGBoost regressor model file.
 * **trainingdata.py / testingdata.py:** Scripts used to construct, filter, and write the initial historical SQL database.
-* **testing_notebook.py to testing_notebook3.py:** Raw exploratory notebooks tracking attempts at building and evaluating different models
+* **testing_notebook.py to testing_notebook3.py:** The files in this repository track the iterative design phases of the project: Raw exploratory notebooks tracking attempts at building and evaluating different models
 
 ### Attempts at building and evaluating different XGBOOST models
 * **trainingdata.py (Attempt 1 - Raw Regression on all data):** Model struggled to track with the peaks and troughs of the xrsb values, often underpredicted higher class flares and overpredicted minor class flares
