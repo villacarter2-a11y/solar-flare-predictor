@@ -1,5 +1,5 @@
 # Solar Flare Predictor and Tracker
-
+[![Live App](https://shields.io)](https://solar-flare-predictior.streamlit.app)
 This is a real-time data engineering pipeline gathering and using GOES 18 Long XRSB data from the NOAA. The machine learning model uses this data to create a prediction for the next max value within the next 4 hours. The data and prediction is tracked and displayed in a clean Streamlit user interface.
 
 ![Dashboard Preview](solarflaredashboard.png)
@@ -28,4 +28,9 @@ This is a real-time data engineering pipeline gathering and using GOES 18 Long X
 Install the required dependencies inside your virtual environment:
 ```bash
 pip install streamlit pandas numpy xgboost altair urllib3 scikit-learn
+```
+To start the auto-refreshing dashboard interface on your local server, run:
+
+```bash
+streamlit run app.py
 ```
