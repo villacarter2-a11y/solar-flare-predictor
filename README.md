@@ -23,7 +23,7 @@ This is a real-time data engineering pipeline gathering and using GOES 18 Long X
 ### Attempts at Building and Evaluating different XGBOOST models
 * **trainingdata.py (Attempt 1 - Raw Regression on all data):** Model struggled to track with the peaks and troughs of the xrsb values, often underpredicted higher class flares and overpredicted minor class flares
 * **testingdata2.py: (Attempt 2 - Data Splitting Failure):** Attempted to incorporate multiple models in order to eliminate attempt 1's failure during peaks/troughs. The different models were to be chosen dependent on the xrsb_mean value. Hence, the model attempting to guess higher class flares would be trained and specialized on data where xrsb_mean > 6.0 ( b class flare). This was an attempt to create specialized models that excelled at their one specific data type. However, the model performed even worse because their specialized aspect did not allow them to predict transitions between the two low and high states of solar flare classes.
-* **testing_notebook.py to testing_notebook3.py:** Returned to original regression on all data -> tested against a baseline of the previous 4 hours maximum value. The baseline was highly successful with a LOG Mean of .1363, yet failed to capture the extremeness of the peaks and troughs. In order to create a model better than the baseline, I switched to a residual based model which now only had to calculate the difference between the baseline and the actual incoming value. This residual model was successful...
+* **testing_notebook.py to testing_notebook3.py:** Returned to original regression on all data -> tested against a baseline of the previous 4 hours maximum value. The baseline was highly successful with a LOG Mean of .1363, yet failed to capture the extremeness of the peaks and troughs. In order to create a model better than the baseline, I switched to a residual based model which now only had to calculate the difference between the baseline and the actual incoming value. This residual model was successful and optimized the highly successful basline by 1.17%.
 
 ### Local Installation and Running
 Install the required dependencies inside your virtual environment:
@@ -35,3 +35,7 @@ To start the auto-refreshing dashboard interface on your local server, run:
 ```bash
 streamlit run app.py
 ```
+
+## Contact / Author
+
+* **Carter Villa** - [GitHub](https://github.com/villacarter2-a11y) | [LinkedIn](https://www.linkedin.com/in/carter-villa-a32040421/)
